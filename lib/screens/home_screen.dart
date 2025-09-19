@@ -64,11 +64,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   MaterialPageRoute(builder: (context) => DetailsScreen()),
                 );
                 if (result != null) {
-                  // result = {'city': 'Kraków', 'lat': 50.06, 'lon': 19.94}
                   _updateCity(result['city'], result['lat'], result['lon']);
                 }
               },
               child: const Text('Wybierz miasto'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, "/settings");
+              },
+              child: const Text("test"),
             ),
           ],
         ),
