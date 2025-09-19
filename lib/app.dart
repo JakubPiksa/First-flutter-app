@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Weather App',
       theme: ThemeData(primarySwatch: Colors.blue),
-      // 🗺️ Routing – zdefiniowane podstrony
+
       initialRoute: '/',
       routes: {
         '/': (context) => const HomeScreen(),
