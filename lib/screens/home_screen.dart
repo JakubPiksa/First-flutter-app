@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/weather_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -11,8 +12,14 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Witaj w aplikacji pogodowej!'),
-            const SizedBox(height: 20),
+            // ⭐ Dodany widżet pogodowy
+            const WeatherCard(
+              city: 'Warszawa',
+              temperature: 22.5,
+              description: 'Słonecznie',
+              icon: Icons.wb_sunny,
+            ),
+            const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/details');
