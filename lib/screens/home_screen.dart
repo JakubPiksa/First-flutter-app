@@ -48,8 +48,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   return WeatherCard(
                     city: selectedCity,
                     temperature: weather.temperature,
-                    description: 'Słonecznie', // możesz mapować z weathercode
-                    icon: Icons.wb_sunny,
+                    description: weather.isDay ? 'Dzień' : 'Noc',
+                    icon: weather.isDay ? Icons.wb_sunny : Icons.nights_stay,
                   );
                 } else {
                   return const Text('Brak danych');
